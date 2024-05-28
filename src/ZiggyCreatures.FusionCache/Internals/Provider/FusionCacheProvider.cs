@@ -92,4 +92,6 @@ internal sealed class FusionCacheProvider
 			: $"No cache has been registered with name ({cacheName}): make sure you registered it with the AddFusionCache(\"{cacheName}\") method."
 		);
 	}
+
+	public IReadOnlyCollection<string> CacheNames => _caches.Keys;
 }
